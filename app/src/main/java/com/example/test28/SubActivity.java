@@ -28,7 +28,9 @@ public class SubActivity extends AppCompatActivity {
         findViewById(R.id.Btn3).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(SubActivity.this,MainActivity.class));
+                Intent intent =new Intent(SubActivity.this,MainActivity.class);
+                intent.putExtra("키","위");
+                startActivity(intent);
             }//activity를 실행해라 뭐냐면, new intent로 받아서 subactivity.this에 mainactivity 호출
             //intent는 화면을 전환할때 데이터를 넘겨줄 수 있음
         });
